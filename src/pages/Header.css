@@ -1,0 +1,116 @@
+
+.scroll-watcher {
+    height: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: lime;
+    width: 100%;
+    scale: 0 1;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+  }
+
+  @keyframes scroll-watcher {
+    to { scale: 1 1; }
+  }
+  
+  /* Header Styles */
+  .header {
+    position: fixed;
+    top: 2vh;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    background-color: transparent;
+    display:flex;
+    padding: 20px;
+    align-items: center;
+    animation: fade-in 1s ease-in forwards;
+  }
+  
+  .company-logo {
+    position: fixed;
+    left: 15vw;
+    top: 5vh;
+    height: 80px;
+  }
+  
+  /* Navigation Links */
+
+  .nav-links {
+    position: fixed;
+    right: 20vw
+  }
+
+  .nav-links a {
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+  }
+  
+  .nav-links a:hover {
+    color: #f4f4f4;
+    text-shadow: 1px 1px 2px #333;
+  }
+  
+  .dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 15px;
+    line-height: 2px;
+    padding: 10px 0px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 14px;
+    text-decoration: none;
+    display: block;
+    font-weight: 700;
+  }
+
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    animation: hover-on 250ms ease-in forwards;
+  }
+  
+
+  @keyframes fade-in {
+    from {scale: .8; opacity: 0;}
+    to {scale: 1; opacity: 1;}
+  }
+
+  @keyframes hover-on {
+    from {opacity: 0;}
+    to {opacity: 1; transform: translateY(-10px);}
+  }
+
+  @keyframes hover-off {
+    from {opacity: 0;}
+    to {opacity: 1; transform: translateY(-10px);}
+  }

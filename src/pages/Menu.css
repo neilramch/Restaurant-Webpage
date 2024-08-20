@@ -1,0 +1,81 @@
+/* Container for the entire menu */
+.menu-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+}
+
+.menu-container .button-back img {
+    position: absolute;
+    left: 15px;
+    text-decoration: none;
+}
+
+/* Main heading for the menu */
+.menu-container h1 {
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;    
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Container for the lunch section */
+.menu-lunch {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* General styling for each section like Appetizers, Main, etc. */
+.menu-lunch .menu-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 30vw;
+    height: 50vh;
+}
+
+/* Style for the headings in each section */
+.menu-lunch h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #15BD74;
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+    font-size: 2em;
+}
+
+/* Styling the images in each section */
+.menu-lunch img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Add hover effects to the sections */
+.menu-lunch div:hover {
+    transform: translateY(-10px);
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .menu-lunch {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+
+    .menu-container h1 {
+        font-size: 2em;
+    }
+}

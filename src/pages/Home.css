@@ -1,0 +1,171 @@
+/* Home.css */
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  #section-1-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  /* Background that fades in */
+  #section-1-home .background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+      url('https://images.squarespace-cdn.com/content/v1/5d654ba7981f16000104a5a7/1568044554507-PBGWM2AQW0CDD15HR1SO/TREVA_NF_1218_128.jpg?format=2500w');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Behind the content */
+    opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+  }
+
+  #section-1-home .img-treva-2010 {
+    height: 300px;
+    position: relative;
+    z-index: 1; /* Above the background */
+  }
+  
+  
+  /* Arrow Button */
+  .down-arrow {
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    background: none;
+    bottom: 0;
+    transform: rotate(90deg);
+  }
+  
+  .down-arrow:hover {
+    transform: rotate(90deg) scale(1.1);
+  }
+
+  #section-2-home {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    width: 100%;
+    height: 70vh;
+    animation: fade-in;
+    animation-timeline: view();
+  }
+
+  #section-2-home h2 {
+    font-family: museo-slab;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    letter-spacing: .14em;
+    line-height: 1.4em;
+    text-transform: none;
+    color: #b95a27;
+  }
+
+  #section-2-home h3 {
+    font-family: gibbs;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    letter-spacing: .02em;
+    line-height: 1.5em;
+    text-transform: none;
+    color: #363a45;
+    width: 45vw;
+  }
+
+  #section-2-home .button-delivery {
+    padding: 13px 26px;
+    transition: .1s opacity linear;
+    font-family: proxima-nova;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #fff;
+    background-color: #363945;
+    border-color: #363945;
+    cursor: pointer;
+  }
+
+  #section-3-home {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('https://images.squarespace-cdn.com/content/v1/5d654ba7981f16000104a5a7/1711545756395-KSIIWE11EZ9G7T8H41RW/TREVA_Photos_MG_1743-2.jpg?format=2500w');
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    width: 100%;
+    height: 100vh;
+    animation: fade-in;
+    animation-timeline: view();
+  }
+
+  #section-3-home h1 {
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 82px;
+    letter-spacing: .1em;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+
+  #section-3-home h2 {
+    color: white;
+    font-family: gibbs;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 17px;
+    letter-spacing: .02em;
+    line-height: 1.5em;
+    text-transform: none;
+    width: 45vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  @keyframes fade-in {
+    from {scale: .8; opacity: 0;}
+    to {scale: 1; opacity: 1;}
+  }
+
+  #section-3-home img {
+    transform: scale(.3);
+  }
+
+
+
+  
